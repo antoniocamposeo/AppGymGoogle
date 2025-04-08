@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "gymtracker-456214",
+  "private_key_id": "994e77dae51d0650f20b5159b697b760904323ee",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCWnPqevY00692e\n4rwyZMO6hC7iPKOXa6jgMLddk92PEQAf4mbP2+to0+MIhCAlwaFi8XSbWK/i4W8q\nDIFOxxASVrVJ3Da4e8h+6PK6H8MwDLW5tyvA7ANPp4lfDF6T9mW+c3L14gnjTWWK\ngg7cEMS4A2eMPvqedqY9AwJbRt8E1HwW+h7LroT3LwNjR2smAgwN+G1Cu8OcMkLv\n3J5nTPEUk8XKpQyPOoWKVnhBjJ4nnjrlgRb/QqSrC5hG6isrDuoikw0KhzHe8HSN\nmyFqYVSJfQqk96O3RWIRfLDdXbZS22DitsIsyqO+qI1YH0K2VC8c+2ofOiVk+Is1\n6u2qF0AjAgMBAAECggEAAwnj4omQntM2il0o19u4cA4dXy2MKNCOKlBTliqpL71h\nR8NmOJ01CLsIgDayxelgq4ZKSHjsOvDMsLWzvCjJRAIF+VBK2p6y/ldXPb+kcbJe\nzjkunyhxihY5lH+Mml13LnXV9yNH+MnzUG1sTy68SCeOkni2hdoRY4lNXPDJdYL0\n4hsqhgisd0NQkZRdVOBYCaaKEi/vQAhBVHdLlHkQwu53Pby9/CzT8zfLTMKWOfM1\nXtouDGjJ7fgYKtbXTQF+Xs21T3YQKlmw430Ir92WFttyHln3Gy6kSVLovj87TaGK\nmwMjmPQL9QGUFd3Yd2mAUCL8ATG1du+iW+vV1PfUuQKBgQDIDwu953K2MBrmnU0e\nok67Lm1xGd5kAbch7QC2f/Gzqm9cC4FVPendrup8qMBUCn1d5JgNADE+OlMcNbVo\n9RqOo+YZqHPmEaeuiL/gL1bT/hcuFsT8vjLBHjoQWQMTH6Fwzshe6kEh81omfEjN\ngiXCZ73DsU75TqCyDJ6Q7hYnWQKBgQDAum8tHcEY/F10rleOLBx3HPkUxiJP9/RN\nlSp6EoSkUkUSpl+4ojaI8++Yhlt/bwMmiaXVH08DvmWea0NO1RADUKKqxcGNaZm9\nuluEp9dMv+4IWgQt2i9KLRJZQ6ZxFJwmw3p89xGUglyriI4pSOBv9XokIjcpscFM\nGjNBBDRv2wKBgAi7x2px6SsU7Ie2xEAbG87GFxcB5xh8jq8XdpmA+l86iIP/KJU9\nD7GSyj/I6iSBFLn9mbmvkXbC+w/XNGUxlgg2FXx3Qx//E0/mPmIeDu9QP1jOu6jA\n8NxHYoeGK0Exd03CaTLjjRZbVkspz8/Q568V8k3Rtr3hddhv/pgbHLJ5AoGBAJEJ\nvLEPO0o6YXp12Z48xA8/1pMzqI7V4xyfrR/A3+FpqGGoo1CngrL+IMmAE0uLl6tg\n21PQA/6lQoQ95KFm5m4YONKbkFWDqxeFL2pdhUFVDyVp2MtI7127HZvftVpUUE87\nvOpeZPSGRocwdQvMtFqNOiYHOcw+4WEMNpYvO+cRAoGBAIsff4jHZ2ABoKeKVOb9\n3JaVVZ0AS+T5Ffg9oZjkKhZTz0FLZjre1gHxV7vFHbOKehpmaVfAoG3/0M/bFhKT\nv4cyVfqo0uhx7WbFZlCzT+tN2sIhKMu+qjRPcONub+WoMUSlPCO6+SbStszr0Bd8\neUjbkVIzQL1HULrRfkoB/6W7\n-----END PRIVATE KEY-----\n",
+  "client_email": "stefanodidonna@gymtracker-456214.iam.gserviceaccount.com",
+  "client_id": "103924587069213940868",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/stefanodidonna%40gymtracker-456214.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
