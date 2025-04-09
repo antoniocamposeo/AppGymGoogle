@@ -1,0 +1,5 @@
+# Ignora file di credenziali
+*.json
+
+# Ignora secrets locali
+.streamlit/secrets.toml
