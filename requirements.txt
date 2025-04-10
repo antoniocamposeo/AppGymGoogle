@@ -1,4 +1,16 @@
-pandas==2.0.0
-streamlit==1.32.0
-gspread==5.12.0
-google-auth==2.27.0
+# Dipendenze principali
+pandas==1.5.3
+numpy==1.24.3
+streamlit==1.31.1
+gspread==5.10.0
+google-auth==2.22.0
+
+# Dipendenze secondarie per evitare conflitti
+#blosc2==2.0.0
+#cython==0.29.33
+#pooch==1.5.0
+#FuzzyTM==0.4.0
+
+# Altre dipendenze necessarie per la tua app
+google-oauth2-tool==0.0.3
+google-auth-oauthlib==1.0.0
