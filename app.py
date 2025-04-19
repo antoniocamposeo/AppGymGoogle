@@ -28,27 +28,53 @@ INTENSITY_OPTIONS = ["", "FAIL", "RIR 0", "RIR 0-1", "RIR 1-2", "RIR 2-3"]
 
 # Dati utente
 USER_DATA = {
-    "antonio": {
-        "password": "123456",
-        "credentials_file": "test1",
-        "name": "Antonio"
+    "Antonio": {
+        "password": st.secrets["AntonioC"]["password"],
+        "credentials_file": "Antonio",
+        "name": "Antonio",
+        "sheets_google": st.secrets["AntonioC"]["sheets_url"]
     },
-    "stefano": {
-        "password": "123456",
-        "credentials_file": "test2",
-        "name": "Stefano"
+    "Stefano": {
+        "password": st.secrets["StefanoD"]["password"],
+        "credentials_file": "Stefano",
+        "name": "Stefano",
+        "sheets_google": st.secrets["StefanoD"]["sheets_url"]
+    },
+    "Francesco": {
+        "password": st.secrets["FrancescoT"]["password"],
+        "credentials_file": "Francesco",
+        "name": "Francesco",
+        "sheets_google": st.secrets["FrancescoT"]["sheets_url"] 
+    },
+    "Enrico":{
+        "password":st.secrets["EnricoC"]["password"],
+        "credentials_file": "Enrico",
+        "name": "Enrico",
+        "sheets_google": st.secrets["EnricoC"]["sheets_url"]
+    },
+    "Gianni":{
+        "password": st.secrets["GianniE"]["password"],
+        "credentials_file": "Gianni",
+        "name": "Gianni",
+        "sheets_google": st.secrets["GianniE"]["sheets_url"]
+    },
+    "Michele":{
+        "password": st.secrets["MicheleC"]["password"],
+        "credentials_file": "Michele",
+        "name": "Michele",
+        "sheets_google": st.secrets["MicheleC"]["sheets_url"]
     }
-}
+    }
 
 # URL del Google Sheets
-SHEETS_URL = "https://docs.google.com/spreadsheets/d/1ocESHDXfRD3u8VZjXkBXwj9G4PpeA93hCUtfTns509M/edit?gid=307799828#gid=307799828"
+#SHEETS_URL = "https://docs.google.com/spreadsheets/d/1ocESHDXfRD3u8VZjXkBXwj9G4PpeA93hCUtfTns509M/edit?gid=307799828#gid=307799828"
 
 # CSS personalizzato
 st.markdown("""
 <style>
     .main-header {
         font-size: 2.5rem;
-        color: #1E88E5;
+        color: #FF8C4B;
         text-align: center;
         margin-bottom: 2rem;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
@@ -127,7 +153,7 @@ st.markdown("""
     
     .login-header {
         font-size: 1.5rem;
-        color: #1E88E5;
+        color: #FF8C4B;
         text-align: center;
         margin-bottom: 1.5rem;
     }
@@ -254,12 +280,15 @@ if 'credentials_file' not in st.session_state:
 if 'user_name' not in st.session_state:
     st.session_state['user_name'] = ""
 
+if 'sheets_google' not in st.session_state:
+    st.session_state['sheets_google'] = ""
+
 # Header principale
 st.markdown("<h1 class='main-header'>Workout Tracker Pro</h1>", unsafe_allow_html=True)
 
 # Pagina di login se l'utente non è loggato
 if not st.session_state['logged_in']:
-    st.markdown("<div class='login-container'>", unsafe_allow_html=True)
+    #st.markdown("<div class='login-container'>", unsafe_allow_html=True)
     st.markdown("<h2 class='login-header'>Accedi al tuo account</h2>", unsafe_allow_html=True)
     
     email = st.text_input("Email")
@@ -273,6 +302,8 @@ if not st.session_state['logged_in']:
             st.session_state['user_email'] = email
             st.session_state['credentials_file'] = USER_DATA[email]["credentials_file"]
             st.session_state['user_name'] = USER_DATA[email]["name"]
+            st.session_state['sheets_google'] = USER_DATA[email]["sheets_google"]
+            print(USER_DATA[email]["sheets_google"])
             st.success("Login effettuato con successo!")
             st.rerun()
         else:
@@ -291,6 +322,8 @@ else:
         st.session_state['user_email'] = ""
         st.session_state['credentials_file'] = ""
         st.session_state['user_name'] = ""
+        st.session_state['sheets_google'] = ""
+        
         st.rerun()
     
     # Tentativo di caricamento del foglio Google Sheets
@@ -302,7 +335,7 @@ else:
         client = get_google_client(credentials_file)
         
         # Apertura del foglio
-        spreadsheet = client.open_by_url(SHEETS_URL)
+        spreadsheet = client.open_by_url(st.session_state['sheets_google'])
         
         # Lista dei fogli
         worksheet_list = spreadsheet.worksheets()
